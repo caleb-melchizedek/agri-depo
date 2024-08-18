@@ -1,19 +1,18 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import  LandingPage from './pages/landing'
+import  AdminLogin from './pages/adminLogin'
 // import logo from './logo.svg';
 import './App.css';
-
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/">
-            <LandingPage />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<AdminLogin />} />
+        </Routes>
+        </Router>
     </div>
   );
 }
